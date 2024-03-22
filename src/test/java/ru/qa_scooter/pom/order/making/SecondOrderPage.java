@@ -10,7 +10,6 @@ import ru.qa_scooter.constants.RentTime;
 
 import java.time.LocalDate;
 
-import static ru.qa_scooter.tests.configs.Global.formatter;
 import static ru.qa_scooter.tests.configs.Global.today;
 
 public class SecondOrderPage extends AbstractOrderPage {
@@ -72,8 +71,6 @@ public class SecondOrderPage extends AbstractOrderPage {
 
         int weekOffset = 1 + (rentalDate.getDayOfMonth()-1 + rentalDate.withDayOfMonth(1).getDayOfWeek().getValue()) / 7;
 
-        //div[@class='react-datepicker__week' and position()=1]//*[text()='30']
-
         rentalDateXpath = "//div[@class='" + weekClassName
                 + "' and position()="
                 + weekOffset
@@ -84,28 +81,12 @@ public class SecondOrderPage extends AbstractOrderPage {
 
     }
 
-    public void setDateByInput(LocalDate rentalDate) {
-        if (rentalDate == null) {
-            return;
-        }
-        driver.findElement(dateInput).sendKeys(rentalDate.format(formatter));
-    }
-
-    public String getDateError() {
-        return getFieldErrorText(dateInput);
-    }
-
-
     public void setRentTime(RentTime rentPeriod) {
         if (rentPeriod == null) {
             return;
         }
         driver.findElement(rentTimeInput).click();
         driver.findElement(By.xpath("//*[text()='" + rentPeriod.getStringValue() + "']")).click();
-    }
-
-    public String getRentTimeError() {
-        return getFieldErrorText(rentTimeInput);
     }
 
     public void setColor(Color color) {

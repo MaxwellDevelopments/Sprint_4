@@ -104,16 +104,6 @@ public class FirstOrderPage extends AbstractOrderPage {
         return getFieldErrorText(phoneNumberInput);
     }
 
-
-    public void fillPageWithoutSubway(Order order) {
-        this.fillPage(
-                Order.createFirstPageOrder(
-                    order.getFirstName(), order.getLastName(),
-                    order.getAddress(), null, order.getPhoneNumber()
-                )
-        );
-    }
-
     @Override
     public void fillPage(Order order) {
         waitForAllPageInputsLoad();

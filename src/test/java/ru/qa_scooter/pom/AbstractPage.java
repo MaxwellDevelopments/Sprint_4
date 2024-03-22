@@ -57,12 +57,6 @@ public abstract class AbstractPage {
         clickOnButton(orderStatusButton);
     }
 
-    public void acceptCookie() {
-        new WebDriverWait(driver, 3).
-                until(ExpectedConditions.elementToBeClickable(cookieButton));
-        driver.findElement(cookieButton).click();
-    }
-
     public void writeInSearchInput(Order order) {
         new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.visibilityOfElementLocated(orderSearchInput));
