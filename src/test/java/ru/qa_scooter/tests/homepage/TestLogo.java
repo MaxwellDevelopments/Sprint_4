@@ -16,7 +16,7 @@ import static org.hamcrest.CoreMatchers.is;
 public class TestLogo extends BaseTest {
 
     @Test
-    public void testGoToYandexPageFromScooterLogo() throws InterruptedException {
+    public void testGoToYandexPageFromScooterLogo() {
         String expected = Page.DZEN_YANDEX.getTitle();
         String message = "Yandex.Dzen main page hasn't been opened";
         String result;

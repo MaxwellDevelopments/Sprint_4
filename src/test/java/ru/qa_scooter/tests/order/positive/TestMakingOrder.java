@@ -65,7 +65,6 @@ public class TestMakingOrder extends BaseTest {
     @Test
     public void shouldMakeOrder() {
         String message = "The order hasn't been processed";
-        boolean actual;
         boolean expected = true;
 
         driver.get(Page.HOME_PAGE_SCOOTER.getLink());

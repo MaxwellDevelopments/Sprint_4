@@ -1,17 +1,13 @@
 package ru.qa_scooter.tests.homepage;
 
 import org.hamcrest.MatcherAssert;
-import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.Cookie;
 import ru.qa_scooter.constants.Page;
 import ru.qa_scooter.pom.ScooterHomePage;
 import ru.qa_scooter.tests.configs.BaseTestAfterAndBeforeClass;
-
-import java.util.Set;
 
 import static org.hamcrest.CoreMatchers.is;
 import static ru.qa_scooter.tests.configs.Global.setCookie;
